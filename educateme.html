@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>EducateMe</title>
+     <link rel="stylesheet" href="ppstyle.css">
+  </head>
+
+<!-- TAB CONTROLLERS -->
+<input id="panel-1-ctrl"
+       class="panel-radios" type="radio" name="tab-radios" checked>
+<input id="panel-2-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="nav-ctrl"
+       class="panel-radios" type="checkbox" name="nav-checkbox">
+
+<header id="introduction">
+  <h1>EducateMe: A place where you can finally learn!</h1>
+</header>
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <label id="open-nav-label" for="nav-ctrl"></label>
+    <li id="li-for-panel-1">
+      <label class="panel-label"
+             for="panel-1-ctrl">Home</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-2">
+      <label class="panel-label"
+             for="panel-2-ctrl">University</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl">Subjects</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-4">
+      <label class="panel-label"
+             for="panel-4-ctrl">Video</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-5" class="last">
+      <label class="panel-label"
+             for="panel-5-ctrl">About Us</label>
+    </li>
+    <label id="close-nav-label" for="nav-ctrl">Close</label>
+</ul>
+
+<!-- THE PANELS -->
+<article id="panels">
+  <div class="container">
+    <section id="panel-1">
+      <main>
+        <h1>Homepage</h1>
+            <form id="form"> 
+                <input type="search" id="query" name="q" placeholder="Search...">
+                <button class="searchbtn">Search</button>
+            </form>
+      </main>
+    </section>
+    <section id="panel-2">
+      <main>
+        <h1>University</h1>
+          <h4><a href="https://www.saintleo.edu"</a>Saint Leo University</h4>
+          <div class="dropdown">
+            <button class="dropbtn">Technology</button>
+            <div class="dropdown-content">
+               <a href="#">COM-430</a>
+               <a href="#">COM-330</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Math</button>
+            <div class="dropdown-content">
+               <a href="#">MAT-361</a>
+               <a href="#">MAT-232</a>
+            </div>
+           </div>
+           <div class="dropdown">
+            <button class="dropbtn">Science</button>
+            <div class="dropdown-content">
+               <a href="#">BIO-125</a>
+               <a href="#">CHE 123</a>
+            </div>
+           </div>
+           <div class="dropdown">
+            <button class="dropbtn">English</button>
+            <div class="dropdown-content">
+               <a href="#">ENG-320</a>
+               <a href="#">ENG-205</a>
+            </div>
+           </div>
+           <div class="dropdown">
+            <button class="dropbtn">Religion</button>
+            <div class="dropdown-content">
+               <a href="#">REL-450</a>
+               <a href="#">REL-223</a>
+            </div>
+         </div>
+      </main>
+    </section>
+    <section id="panel-3">
+      <main>
+        <h1>Subjects</h1>
+             <p><a href="University/Technology">Technology</a></p>
+             <p><a href="University/Math">Math</a></p>
+             <p><a href="University/Science">Science</a></p>
+             <p><a href="University/English">English</a></p>
+             <p><a href="University/Religion">Religion</a></p>  
+      </main>
+    </section>
+    <section id="panel-4">
+      <main>
+        <h1>Video</h1>
+           <iframe width="560" height="315"  
+                src="https://www.youtube.com/embed/sB2iQSvrcG0"                   
+           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+           </iframe>
+      </main>
+    </section>
+    <section id="panel-5">
+      <main>
+        <h1>About Us</h1>
+           <p>At all levels of education, growing use of technology for improved teaching and learning will be the future. Most schools and universities now offer courses and whole degree programs via distance education or online, as well as alternative teaching and learning modes, due to low attendance in their onsite classes. The majority of these online courses are currently only available to undergraduate students. Still, there is a growing trend of using similar graduate and post-baccalaureate professional education models. Many different terminologies and technologies are used in the online teaching and learning arena to disseminate knowledge. E-Learning is the broad term for this new educational sector.</p><p>With rapid technological advancements and widespread computer use in academic institutions, organizations, and homes, now is a perfect time to build and support a new learning culture. Why not create a way to make it easier for students to get their books for school or videos required for their classes. They would have them immediately on their laptop, phone, or tablet, known as cloud computing. Cloud computing technologies allow academic institutions to access computing on demand, especially those that do not have the technical expertise to support their infrastructure. Cloud computing makes it possible for almost anyone to deploy tools that can scale on-demand to serve as many users as desired.</p>
+      </main>
+    </section>
+  </div>
+</article>
