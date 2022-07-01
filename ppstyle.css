@@ -3,14 +3,6 @@ html {
   background-color: #f0c7b1;
 }
 
-ul#tabs-list {
-  list-style: none;
-  text-align: center;
-  border-bottom: 1px solid #dfdfdf;
-  margin: 0;
-  padding: 0;
-}
-
 label.panel-label {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -29,7 +21,76 @@ label.panel-label {
 label.panel-label:hover {
   color: #2b7dc0;
 }
+  ul#tabs-list {
+    text-align: center;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  ul#tabs-list li {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.875em;
+    width: 18%;
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid #dfdfdf;
+    position: relative;
+  }
+  ul#tabs-list li:hover {
+    transition: none;
+    border-right: none;
+  }
+  ul#tabs-list li:hover.last {
+    border-right: 1px solid transparent;
+  }
+  ul#tabs-list li:hover + li {
+    border-left: 1px solid #dfdfdf;
+  }
+  
+  #tabs-list label.panel-label {
+    padding: 12px 0;
+  }
+  ul#tabs-list li label.panel-label {
+    position: relative;
+    padding: 24px 0;
+  }
+  ul#tabs-list li label.panel-label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 100%;
+    background-color: #c0392b;
+    height: 0;
+    transition-property: height;
+    transition-duration: 200ms;
+  }
 
+  #tabs-list #li-for-panel-1 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+    place-items: center;
+  }
+  #tabs-list #li-for-panel-2 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+  }
+  #tabs-list #li-for-panel-3 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+    
+  }
+  #tabs-list #li-for-panel-4 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+  }
+  #tabs-list #li-for-panel-5 {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 200ms;
+  }
 #panels {
   background-color: white;
 }
@@ -53,6 +114,7 @@ label.panel-label:hover {
   max-height: initial;
   opacity: 1;
   padding: 48px 24px;
+ 
 }
 
 #panel-2-ctrl:checked ~ #panels #panel-2 main {
@@ -84,6 +146,7 @@ label.panel-label:hover {
     max-height: 46px;
     opacity: 1;
   }
+  }
 
   #nav-ctrl:checked ~ #tabs-list #li-for-panel-2 {
     max-height: 46px;
@@ -114,9 +177,12 @@ label.panel-label:hover {
     left: 0;
     cursor: pointer;
   }
-
+ #open-nav-label,
+#close-nav-label {
+    display: none;
+  }
   #nav-ctrl:checked ~ #tabs-list #open-nav-label {
-    display:none;
+    display: none;
   }
 
   #close-nav-label {
@@ -143,42 +209,13 @@ label.panel-label:hover {
   #tabs-list {
     position: relative;
   }
-  #tabs-list label.panel-label {
-    padding: 12px 0;
-  }
-  #tabs-list #li-for-panel-1 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-2 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-3 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-4 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
-  #tabs-list #li-for-panel-5 {
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 200ms;
-  }
+  
 
-  #panels .container {
-    width: 100%;
-  }
+
   #panels section header {
     display: block;
   }
-}
+
 @media all and (min-width: 768px) {
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1 {
     pointer-events: none;
@@ -186,6 +223,7 @@ label.panel-label:hover {
     transform: translate3d(0, 1px, 0);
     box-shadow: none;
     border-right: none;
+}
   }
   #panel-1-ctrl:checked ~ #tabs-list #li-for-panel-1.last {
     border-right: 1px solid transparent;
@@ -275,72 +313,27 @@ label.panel-label:hover {
   #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5.last {
     border-right: 1px solid transparent;
   }
-  #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5 + li {
-    border-left: 1px solid #dfdfdf;
-  }
+
   #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5 label.panel-label {
     background-color: white;
     color: #c0392b;
-    padding-top: 26px;
-  }
-  #panel-5-ctrl:checked ~ #tabs-list #li-for-panel-5 label.panel-label::after {
-    height: 6px;
+    
   }
 
-  ul#tabs-list {
-    text-align: center;
-    border-bottom: 1px solid #dfdfdf;
-  }
-  ul#tabs-list li {
-    display: inline-block;
-    text-align: center;
-    font-size: 0.875em;
-    width: 18%;
-    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.05);
-    border-right: 1px solid #dfdfdf;
-    position: relative;
-  }
-  ul#tabs-list li:hover {
-    transition: none;
-    border-right: none;
-  }
-  ul#tabs-list li:hover.last {
-    border-right: 1px solid transparent;
-  }
-  ul#tabs-list li:hover + li {
-    border-left: 1px solid #dfdfdf;
-  }
-  ul#tabs-list li label.panel-label {
-    position: relative;
-    padding: 24px 0;
-  }
-  ul#tabs-list li label.panel-label::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 100%;
-    background-color: #c0392b;
-    height: 0;
-    transition-property: height;
-    transition-duration: 200ms;
-  }
-  ul#tabs-list li label.panel-label:hover {
+
+ul#tabs-list li label.panel-label:  {
     padding-top: 25px;
   }
-  ul#tabs-list li label.panel-label:hover::after {
+ul#tabs-list li label.panel-label: hover:: after {
     height: 6px;
   }
 
-  #open-nav-label,
-#close-nav-label {
-    display: none;
-  }
+ 
 
   #nav-ctrl {
     display: none;
   }
-}
+
 @media all and (min-width: 900px) {
   main {
     width: 70%;
@@ -388,34 +381,34 @@ body {
   padding: 48px 24px;
   color: #f0c7b1;
 }
-#introduction h1 {
-  font-weight: bold 300;
-  text-align: center;
-}
 
 main h1 {
-  font-size:25px;
-  position:absolute;
-  top: 250px;
+  font-size: 25px;
+  position: absolute;
+  top: 270px;
   right: 950px;
   font-weight: bold 300;
   text-align: center;
   color: #e74c3c;
 }
+#introduction h1 {
+  font-weight: bold 300;
+  text-align: center;
+}
+
+
 main h4 {
-  position:absolute;
-  top: 300px;
+  position: absolute;
+  top: 315px;
   right: 930px;
 }
 
 
 
 main p {
-  line-height: 2;
-  display: block;
+  line-height: 100px;
   position: relative;
-  bottom: 70px;
-  left: 500px;
+  bottom: 100px;
 }
 
 label.demo-label {
@@ -435,18 +428,7 @@ label.demo-label:hover {
 }
 
 
-code,
-pre {
-  color: #c0392b;
-  font-family: Inconsolata, "Andale Mono", Andale, monowidth;
-  background-color: #ecf0f1;
-  border: 1px solid #dfdfdf;
-  border-radius: 2px;
-}
 
-code {
-  padding: 2px 6px;
-}
 
 pre {
   padding: 12px;
@@ -456,42 +438,26 @@ pre strong {
   color: #444444;
   font-weight: normal;
 }
-form {
-  background-color: #e74c3c;
-  width: 600px;
-  height: 60px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  left:250px;
-  top:75px; 
-  position: relative;
+
+.dropbtn {
   display: inline-block;
+  border-radius: 4px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  position: relative;
+  left: 420px;
+  top: 40px;
 }
 
-input {
-  all: unset;
-  font: 16px system-ui;
-  color: #fff;
-  height: 100%;
-  width: 100%;
-  padding: 6px 10px;
-}
-::placeholder {
-  color: #fff;
-  opacity: 0.7; 
-}
-/* Dropdown Button */
-.dropbtn {
-  background-color: #e74c3c;
-  color: white;
-  padding: 20px 12px;
-  font-size: 16px;
-  border: none;
-  left:450px;
-  position: relative;
-  display: inline-block;
-}
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -502,11 +468,12 @@ input {
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
-  position: relative;
+  position: sticky;
   background-color: #f1f1f1;
-  min-width: 50px;
-  box-shadow: 2px 8px #7d1d13;
+  box-shadow: 2px 4px #7d1d13;
   z-index: 1;
+  max-width: 150px;
+  left: 425px;
 }
 
 /* Links inside the dropdown */
@@ -518,14 +485,148 @@ input {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover { background-color: #ddd; }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content { display: block; }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #f0c7b1;}
+.dropdown:hover .dropbtn { background-color: #f0c7b1; }
 
+.Subbtn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #e74c3c;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
 
+.Subbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
+.Subbtn span: after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Subbtn:hover span {
+  padding-right: 25px;
+}
+
+.Subbtn: hover span: after {
+  opacity: 1;
+  right: 0;
+}
+
+#students {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  place-items: center;
+  top: 220px;
+}
+
+#students td, #students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even){ background-color: #f2f2f2; }
+
+#students tr:hover { background-color: #ddd; }
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #e74c3c;
+  color: white;
+}
+
+div.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: max-content;
+  overflow: hidden;
+
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  background-color: transparent;
+  outline: none;
+  
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 4px 0px 4px 14px;
+  border: none;
+  width: 80%;
+}
+
+input::placeholder {
+  color: #a5a5a5;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  width: 20%;
+  
+  font-size: 16px;
+  color: #000;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 0px;
+
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #dfdfdf;
+}
+
+#About_Us {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+  bottom: 50px;
+  
+  
+}
+
+#About_Us td, #About_Us th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#About_Us tr:nth-child(even){ background-color: #f2f2f2; }
+
+#About_Us tr:hover { background-color: #ddd; }
+
+#About_Us th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #e74c3c;
+  color: white;
 }

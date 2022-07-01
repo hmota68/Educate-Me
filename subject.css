@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400|Inconsolata);
+html {
+	background-color: #e87d72;
+}
+h1 {
+
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+.container {
+  display: inline-block;
+  width: 200px;
+  height: 90px;
+  border: none;
+  background-color: #e74c3c;
+  padding: 40px;
+  padding-top: 90px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  
+  
+  
+}
+
+.container:hover {
+  background-color: #ddd;
+  color: black;
+}

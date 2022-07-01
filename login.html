@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="mail">
+        <div class="title">Login Form</div>
+    </div>
+
+        <fieldset class="form-inner">
+          <form action="educateme.html" name ="form1">
+     
+
+                <div class="field" >
+                  <label for="emailId">Username: </label>
+                  <input type="text" id="email" size="64" maxLength= "64" pattern=".+@saintleo\.edu" placeholder="username@saintleo.edu" required>
+                </div>
+                <div class="field" >
+                  <label for= "passwordId">Password: </label>
+                  <input type="password" id="pswd" size = "64" maxLength= "64" pattern="[0-9a-fA-F]{8,15}"  placeholder="8- 15 Character Password" required>
+          
+     
+            <div class="pass-link"><a href="changepassword.html">Forgot password?</a></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" name="submit" value="Submit">
+            </div>
+            <div class="signup-link">Not a member? <a href="register2.html">Signup now</a></div    
+    </div>
+  </body>
+</html>
